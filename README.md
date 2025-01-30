@@ -10,14 +10,14 @@ If you are reading this you are probably the same as I was. And i hope this tuto
   
 ## Requirements
 - ### In the Computer
--  Xorg: If you are using Wayland, this tutorial does not work for you. I have searched a lot and could not find a method that works in Wayland. I think it is impossible in Wayland.
--  A Vnc server(I use x11vnc)
-  To install (Debian-Ubuntu)
+  - Xorg: If you are using Wayland, this tutorial does not work for you. I have searched a lot and could not find a method that works in Wayland. I think it is impossible in Wayland.
+  - A Vnc server(I use x11vnc)
+    To install (Debian-Ubuntu)
 ```bash
 sudo apt install x11vnc
 ```
 - ### In the Tablet
--   A VNC viewer: I use [AVNC](https://play.google.com/store/apps/details?id=com.gaurav.avnc) for android but you can use any other app as well. I don't test it for IOS but I am sure there are VNC clients for IOS. They should work.
+  - A VNC viewer: I use [AVNC](https://play.google.com/store/apps/details?id=com.gaurav.avnc) for android but you can use any other app as well. I don't test it for IOS but I am sure there are VNC clients for IOS. They should work.
 ## Creating a Virtual Display
 I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
 Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me. 
