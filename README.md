@@ -103,26 +103,26 @@ HDMI-1-0 connected 1280x800+1920+0 (normal left inverted right x axis y axis) 0m
    1440x810      60.00    59.97
 ```
 If you don't see a particular resulotion that you want to use you can add with these commands:    
-- First you need to create a custom mode. You can do that with `cvt` or `gtf`:
-```bash
-cvt 1280 800 
-```
+- First you need to create a custom mode. You can do that with `cvt` or `gtf`: ```bash cvt 1280 800 ```
 - Then add the mode that you created
-```bash
-xrandr --newmode "1280x800_60.00"   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync
-xrandr --addmode HDMI-1-0 "1280x800_60.00"
-```
+  ```bash
+  xrandr --newmode "1280x800_60.00"   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync
+  xrandr --addmode HDMI-1-0 "1280x800_60.00"
+  ```
 Now we can enable the virtual monitor we created by
 ```bash
 xrandr --output HDMI-1-0 --right-of eDP --mode 1280x800_60.00
 ```
 I want the second display is placed at the right side of my main monitor, so I use `--right-of` but you can use `--left-of`. `below` or `above`. You can see your mouse cursor now can go beyond the displays edges.    
+
 It's time to start the VNC server
 ```bash
 x11vnc -clip 1280x800+0+0
 ```
 Now you can connect the server.    
-!!! DON NOT FORGET THAT STARTING THE VNC SERVER MEANS ANYONE WHO KNOWS YOUR LOCAL IP ADDRESS IN YOUR LOCAL NETWORK CAN SEE AND CONNECT YOUR VIRTUAL SCREEN!!! To prevent that there are some ways. You can check the internet.
+
+!!! DON NOT FORGET THAT STARTING THE VNC SERVER MEANS ANYONE WHO KNOWS YOUR LOCAL IP ADDRESS IN YOUR LOCAL NETWORK CAN SEE AND CONNECT YOUR VIRTUAL SCREEN!!!    
+To prevent that there are some ways. You can check the internet.
 ## Connecting the VNC Server Wireless (Android and IOS)
 To connect the server with your tablet, you need a VNC viewer is installed on your tablet and you need to know the IP addrees of your computer. To find the IP addres you can use:
 ```bash
