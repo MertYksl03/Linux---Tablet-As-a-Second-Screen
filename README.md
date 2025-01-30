@@ -144,7 +144,7 @@ Then follow these steps:
 - Connect your tablet with your computer via an USB cable
 - Turn on the USB debugging in your tablet
   - First enable the developer options by tapping Build Number 7 times in settings(usually located at about page) 
-  - Then enable the USB debuggin option
+  - Then enable the USB debugging option
 - Run the commmand on PC `adb reverse tcp:5900 tcp:5900`
 - Enable the second display with the new commands that you learned by this tutorial
 - Connect the VNC server with `127.0.0.1` address.
@@ -158,4 +158,4 @@ If your are done using the second screen you can disable it with this command
 xrandr --output HDMI-1-0 --off
 ```
 # For Nvidia Users
-Changing the Xorg Nvidia config file results there is always a second display is created when you boot your system eventough you are not intended to use it. It can be so annoying. To prevent that I add the disabling command in my Gnome Startup Applications. I create one when I need it. I recommed that for you. 
+Changing the Xorg Nvidia config file results there is always a second display is created when you boot your system eventough you are not intended to use it. It can be so annoying. To prevent that I add the disabling command in my Gnome Startup Applications. I create one when I need it. I recommend that for you. 
