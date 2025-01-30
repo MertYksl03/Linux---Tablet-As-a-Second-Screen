@@ -133,7 +133,8 @@ To connect the server with your tablet, you need a VNC viewer is installed on yo
 ```bash
 ip a 
 ```
-**The defualt port that provied x11vnc is 5900** unless you changed it. Now you can connect with the IP address and the port. 
+**The defualt port that provied x11vnc is 5900** unless you changed it.     
+Enter the IP and the port to VNC app in your tablet and connect your new virtual monitor.
 ## Connecting via USB (Only Android)
 First you need to install 
 ```bash
