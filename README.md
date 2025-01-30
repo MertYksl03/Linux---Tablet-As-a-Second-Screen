@@ -25,7 +25,9 @@ Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual
 
 Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)     
 
-First we need to know if the Xorg config file exist. I don't have one. If you have, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
+First we need to know if the Xorg config file exist on `/etc/X11/xorg.conf`.     
+I don't have one but if you have check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
+
 And then we need to know a name of empty port that the computer has. To know the ports and display we can use this command.
 ```bash
 xrandr
