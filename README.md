@@ -138,6 +138,7 @@ ip a
 **The defualt port that provied x11vnc is 5900** unless you changed it.     
 Enter the IP and the port to VNC app in your tablet and connect your new virtual monitor.
 ## Connecting via USB (Only Android)
+This method works even if you don't have network.    
 First you need to install 
 ```bash
 sudo apt install adb android-tools-adb android-tools-fastboot
