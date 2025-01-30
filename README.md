@@ -103,7 +103,12 @@ HDMI-1-0 connected 1280x800+1920+0 (normal left inverted right x axis y axis) 0m
    1440x810      60.00    59.97
 ```
 If you don't see a particular resulotion that you want to use you can add with these commands:    
-- First you need to create a custom mode. You can do that with `cvt` or `gtf`: ```bash cvt 1280 800 ```
+- First you need to create a custom mode. You can do that with `cvt` or `gtf`: ``` cvt 1280 800 ```
+  The output should look like this:
+  ```bash
+  1280x800 59.81 Hz (CVT 1.02MA) hsync: 49.70 kHz; pclk: 83.50 MHz
+  Modeline "1280x800_60.00"   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync
+  ```
 - Then add the mode that you created
   ```bash
   xrandr --newmode "1280x800_60.00"   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync
