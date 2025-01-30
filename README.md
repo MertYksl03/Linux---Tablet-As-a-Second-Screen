@@ -22,9 +22,10 @@ sudo apt install x11vnc
 ## Creating a Virtual Display
 I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
 Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me.    
-Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)     
-First we need to know if the Xorg config file exist. I don't have one. If you have, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
 
+Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)     
+
+First we need to know if the Xorg config file exist. I don't have one. If you have, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
 And then we need to know a name of empty port that the computer has. To know the ports and display we can use this command.
 ```bash
 xrandr
