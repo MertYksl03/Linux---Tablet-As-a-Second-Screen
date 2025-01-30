@@ -1,5 +1,6 @@
 # Tutorial
-I just wanted to use my android tablet as a second monitor on linux and it took so many hours to achive that. I read, watched bunch of differant tutorials. It's so complex than I expected. After figuring it out, I decied to write a tutorial.
+I just wanted to use my android tablet as a second monitor on linux and it took so many hours to achive that. I read, watched bunch of differant tutorials. It's so complex than I expected.
+After figuring it out, I decied to write a tutorial.    
 If you are reading this you are probably the same as I was. And i hope this tutorial help you to do it. Then let's get started.
 
 ## My Test Environmennt
@@ -11,7 +12,7 @@ If you are reading this you are probably the same as I was. And i hope this tuto
 ## Requirements
 - ### In the Computer
   - Xorg: If you are using Wayland, this tutorial does not work for you. I have searched a lot and could not find a method that works in Wayland. I think it is impossible in Wayland.
-  - A Vnc server(I use x11vnc)
+  - A Vnc server(I use x11vnc)   
     To install (Debian-Ubuntu)
 ```bash
 sudo apt install x11vnc
@@ -20,14 +21,14 @@ sudo apt install x11vnc
   - A VNC viewer: I use [AVNC](https://play.google.com/store/apps/details?id=com.gaurav.avnc) for android but you can use any other app as well. I don't test it for IOS but I am sure there are VNC clients for IOS. They should work.
 ## Creating a Virtual Display
 I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
-Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me. 
-Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)
-First we need to know if the Xorg config file exist. I don't have one. If you have, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)
+Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me.    
+Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)     
+First we need to know if the Xorg config file exist. I don't have one. If you have, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
 
 And then we need to know a name of empty port that the computer has. To know the ports and display we can use this command.
 ```bash
 xrandr
-```
+```    
 For me the output looks like this. For you, it probably look different(different number of ports, different port names, different resulotions etc.) but it should look similiar.
 ```bash
 Screen 0: minimum 320 x 200, current 3200 x 1080, maximum 16384 x 16384
@@ -43,7 +44,7 @@ eDP connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 3
    640x480      144.00
 HDMI-1-0 disconnected (normal left inverted right x axis y axis) 
 ```
-As you can see, my laptop has two ports. The eDP port is the main screen of my laptop and the laptop has a disconnected HDMI port named HDMI-1-0. You pick one of the disconnected one(It will be better if it is HDMI) and note that name.
+As you can see, my laptop has two ports. The eDP port is the main screen of my laptop and the laptop has a disconnected HDMI port named HDMI-1-0. You pick one of the disconnected one(It will be better if it is HDMI) and note that name.    
 After that we need to edit the Xorg config file with sudo permission. It located at `/usr/share/X11/xorg.conf.d/10-nvidia.conf` or `/usr/share/X11/xorg.conf.d/nvidia.conf`. The edit you'll need to do is adding the following lines:
 ```bash
 Section "Monitor"
@@ -65,7 +66,7 @@ Section "Screen"
     EndSubSection
 EndSection
 ```
-You need to change the `CHANGE_HERE` string to the port that you choosed and save the file. Then  reboot your laptop or PC. If the port breaks your X server, try another port.
+You need to change the `CHANGE_HERE` string to the port that you choosed and save the file. Then  reboot your laptop or PC. If the port breaks your X server, try another port.     
 After rebooting your system, the system should works as usual. To see the result what we did, use the `xrandr` command again. The output should look like this(I removed some of the lines. It was too long):
 ```bash
 Screen 0: minimum 320 x 200, current 3200 x 1080, maximum 16384 x 16384
@@ -100,7 +101,7 @@ HDMI-1-0 connected 1280x800+1920+0 (normal left inverted right x axis y axis) 0m
    1600x900      59.95    59.82    59.99    59.94
    1440x810      60.00    59.97
 ```
-If you don't see a particular resulotion that you want to use you can add with these commands:
+If you don't see a particular resulotion that you want to use you can add with these commands:    
 - First you need to create a custom mode. You can do that with `cvt` or `gtf`:
 ```bash
 cvt 1280 800 
@@ -114,12 +115,12 @@ Now we can enable the virtual monitor we created by
 ```bash
 xrandr --output HDMI-1-0 --right-of eDP --mode 1280x800_60.00
 ```
-I want the second display is placed at the right side of my main monitor, so I use `--right-of` but you can use `--left-of`. `below` or `above`. You can see your mouse cursor now can go beyond the displays edges.
+I want the second display is placed at the right side of my main monitor, so I use `--right-of` but you can use `--left-of`. `below` or `above`. You can see your mouse cursor now can go beyond the displays edges.    
 It's time to start the VNC server
 ```bash
 x11vnc -clip 1280x800+0+0
 ```
-Now you can connect the server.
+Now you can connect the server.    
 !!! DON NOT FORGET THAT STARTING THE VNC SERVER MEANS ANYONE WHO KNOWS YOUR LOCAL IP ADDRESS IN YOUR LOCAL NETWORK CAN SEE AND CONNECT YOUR VIRTUAL SCREEN!!! To prevent that there are some ways. You can check the internet.
 ## Connecting the VNC Server Wireless (Android and IOS)
 To connect the server with your tablet, you need a VNC viewer is installed on your tablet and you need to know the IP addrees of your computer. To find the IP addres you can use:
