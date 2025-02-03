@@ -203,7 +203,7 @@ For further more information you can check [this](https://github.com/santiagofde
 > Changing the Xorg Nvidia config file results there is always a virtual dislay is connected to the port you added the `/usr/share/X11/xorg.conf.d/10-nvidia.conf`. It can be so annoying to have a virtual display that you cant see. To prevent that add the disabling command in my Gnome Startup Applications. I active it when i need it.
 # Scripts
 To automate and make this process easier to me I write a small bash script. You can change and use it for yourself.
- # The Resources I Use to Create This Tutorial
+ # The Resources I Used
  - https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors
  - https://github.com/santiagofdezg/linux-extend-screen
  - https://unix.stackexchange.com/questions/357959/vnc-server-as-a-virtual-x11-monitor-to-expand-screen-problem#391574
