@@ -30,7 +30,7 @@ sudo apt install x11vnc
  
 > [!WARNING]
 >
-> Do not forget to backup your data before proceeding in case of anything.
+> Don't forget to back up your data before proceeding, just in case.
 >
 
 ## Creating a Virtual Display
