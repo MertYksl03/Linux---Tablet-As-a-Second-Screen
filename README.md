@@ -72,7 +72,9 @@ HDMI-1-0 disconnected (normal left inverted right x axis y axis)
 ```
 As you can see, my laptop has two ports. The eDP port is the main screen of my laptop and the laptop has a disconnected HDMI port named HDMI-1-0. You pick one of the disconnected one(It will be better if it is HDMI) and note that name.    
 
-    
+> [!WARNING]  
+> Before editing the Xorg config file back up and save the unedited version of it.
+> You can do that by creating a copy of the file `10-nvidia,conf` and adding `.bak` of the name of the unedited version. The name of the file should look like this `10-nvidia,conf.bak`
 After that we need to edit the Xorg config file with sudo permission. It located at `/usr/share/X11/xorg.conf.d/10-nvidia.conf` or `/usr/share/X11/xorg.conf.d/nvidia.conf`. The edit you'll need to do is adding the following lines:
 ```bash
 Section "Monitor"
@@ -197,7 +199,8 @@ If you are connecting via USB, you can just `x11vnc -allow 127.0.0.1`
 For further more information you can check [this](https://github.com/santiagofdezg/linux-extend-screen?tab=readme-ov-file#add-more-security-to-the-connection).
 > [!NOTE]
 > Changing the Xorg Nvidia config file results there is always a virtual dislay is connected to the port you added the `/usr/share/X11/xorg.conf.d/10-nvidia.conf`. It can be so annoying to have a virtual display that you cant see. To prevent that add the disabling command in my Gnome Startup Applications. I active it when i need it.
- 
+# Scripts
+To automate and make this process easier to me I write a small bash script. You can change and use it for yourself.
  # The Resources I Use to Create This Tutorial
  - https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors
  - https://github.com/santiagofdezg/linux-extend-screen
