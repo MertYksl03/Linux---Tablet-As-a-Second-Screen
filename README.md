@@ -57,6 +57,8 @@ eDP connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 3
 HDMI-1-0 disconnected (normal left inverted right x axis y axis) 
 ```
 As you can see, my laptop has two ports. The eDP port is the main screen of my laptop and the laptop has a disconnected HDMI port named HDMI-1-0. You pick one of the disconnected one(It will be better if it is HDMI) and note that name.    
+
+    
 After that we need to edit the Xorg config file with sudo permission. It located at `/usr/share/X11/xorg.conf.d/10-nvidia.conf` or `/usr/share/X11/xorg.conf.d/nvidia.conf`. The edit you'll need to do is adding the following lines:
 ```bash
 Section "Monitor"
