@@ -152,9 +152,11 @@ It's time to start the VNC server
 x11vnc -clip 1280x800+0+0
 ```
 Now you can connect the server.    
+> [!CAUTION]  
+>
+> *Starting the VNC server means anyone who knows your local IP addrees in your local network can connect and see or control you PC.*
+> To prevent that there are some ways. You can check the internet for more information.
 
-!!! DON NOT FORGET THAT STARTING THE VNC SERVER MEANS ANYONE WHO KNOWS YOUR LOCAL IP ADDRESS IN YOUR LOCAL NETWORK CAN SEE AND CONNECT YOUR VIRTUAL SCREEN!!!    
-To prevent that there are some ways. You can check the internet.
 ## Connecting the VNC Server Wireless (Android and IOS)
 To connect the server with your tablet, you need a VNC viewer is installed on your tablet and you need to know the IP addrees of your computer. To find the IP addres you can use:
 ```bash
@@ -185,5 +187,12 @@ If your are done using the second screen you can disable it with this command
 ```bash
 xrandr --output HDMI-1-0 --off
 ```
-# For Nvidia Users
-Changing the Xorg Nvidia config file results there is always a second display is created when you boot your system eventough you are not intended to use it. It can be so annoying. To prevent that I add the disabling command in my Gnome Startup Applications. I create one when I need it. I recommend that for you. 
+
+> [!NOTE]
+> Changing the Xorg Nvidia config file results there is always a virtual dislay is connected to the port you added the `/usr/share/X11/xorg.conf.d/10-nvidia.conf`. It can be so annoying to have a virtual display that you cant see. To prevent that add the disabling command in my Gnome Startup Applications. I active it when i need it.
+ 
+ # The Resources I Use to Create This Tutorial
+ - https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors
+ - https://github.com/santiagofdezg/linux-extend-screen
+ - https://unix.stackexchange.com/questions/357959/vnc-server-as-a-virtual-x11-monitor-to-expand-screen-problem#391574
+ - https://askubuntu.com/questions/28608/how-do-you-use-an-android-tablet-as-a-second-display#888269
