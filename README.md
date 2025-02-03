@@ -41,7 +41,7 @@ Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual
 Because I have Nvidia GPU, I am going to explain it for Nvidia cards. But,     
 *If you have an AMD card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#evdi-module)*    
 *If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*    
-Then proceed to the [VNC Server Part]()
+Then proceed to the [VNC Server Part](https://github.com/MertYksl03/Linux---Tablet-As-a-Second-Screen/blob/main/README.md#creating-a-vnc-server)
 
 ### For Nvida GPUs
 #### First we need to know if the Xorg config file exist at `/etc/X11/xorg.conf`
