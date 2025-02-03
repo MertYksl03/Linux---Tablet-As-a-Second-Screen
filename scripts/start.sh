@@ -1,4 +1,4 @@
-#!/bin/bash
+\#!/bin/bash
 
 # Virtually plug the monitor
 xrandr --newmode "1280x800_60.00"   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync
@@ -10,7 +10,7 @@ adb start-server
 adb reverse tcp:5900 tcp:5900
 
 # Start the x11vnc server in the background and capture its PID
-x11vnc --clip 1280x800+1920+0  -viewonly -repeat -rfbwait 3000 -once
+x11vnc --clip 1280x800+1920+0  -viewonly -repeat -rfbwait 3000 -once -allow 127.0.0.1
   
 VNC_PID=$!
 
