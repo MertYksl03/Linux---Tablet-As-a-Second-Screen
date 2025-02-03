@@ -23,12 +23,21 @@ sudo apt install x11vnc
 I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
 Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me.    
 
-Because I have Nvidia GPU, I am going to explain it for Nvidia cards. If you have a different GPU, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors)     
+ ### For AMD and Intel GPUs
+Because I have Nvidia GPU, I am going to explain it for Nvidia cards. But,     
+*If you have an AMD card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#evdi-module)*
+*If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*
 
-First we need to know if the Xorg config file exist at `/etc/X11/xorg.conf`.     
-I don't have one but if you have check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)    
+### For Nvida GPUs
+#### First we need to know if the Xorg config file exist at `/etc/X11/xorg.conf`
+You can check that by checking the output of `cat /etc/X11/xorg.conf`. 
+*If the file exists, you can check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#xorgconf-file-exists)*    
 
-And then we need to know a name of empty port that the computer has. To know the ports and display we can use this command.
+#### If the file does not exists(like me)
+This means the config files are located at `/usr/share/X11/xorg.conf.d/`. We are going to edit this later.    
+
+
+We need to know a name of empty port that the computer has. To know the ports and display we can use this command.
 ```bash
 xrandr
 ```    
