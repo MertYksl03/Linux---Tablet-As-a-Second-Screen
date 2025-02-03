@@ -15,7 +15,7 @@ This tutorial is for especially for **Nvidia users**. But if you have **AMD** or
 - Zorin OS 17.2 (Based on Ubuntu 22.04)
 - Nvidia RTX 3050 Mobile
 - AMD Ryzen 7 5800h with radeon graphics
-- Android Tablet(You can use Ipad as well)
+- Android Tablet
   
 ## Requirements
 - ### In the Computer
