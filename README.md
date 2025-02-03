@@ -25,8 +25,8 @@ Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual
 
  ### For AMD and Intel GPUs
 Because I have Nvidia GPU, I am going to explain it for Nvidia cards. But,     
-*If you have an AMD card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#evdi-module)*
-*If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*
+*If you have an AMD card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#evdi-module)*    
+*If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*     
 
 ### For Nvida GPUs
 #### First we need to know if the Xorg config file exist at `/etc/X11/xorg.conf`
