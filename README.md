@@ -34,8 +34,7 @@ sudo apt install x11vnc
 >
 
 ## Creating a Virtual Display
-I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
-Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me.    
+I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.         
 
  ### For AMD and Intel GPUs
 Because I have Nvidia GPU, I am going to explain it for Nvidia cards. But,     
