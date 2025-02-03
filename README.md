@@ -2,7 +2,15 @@
 I just wanted to use my android tablet as a second monitor on linux and it took so many hours to achive that. I read, watched bunch of differant tutorials. It's so complex than I expected.
 After figuring it out, I decied to write a tutorial.   
 If you are reading this you are probably the same as I was. And i hope this tutorial help you to do it. Then let's get started.    
-This tutorial is for especially for **Nvidia users**. But if you have **AMD** or **Intel** graphic card, **I guide you to the right resourses**.      
+This tutorial is for especially for **Nvidia users**. But if you have **AMD** or **Intel** graphic card, **I guide you to the right resourses**.    
+> [!CAUTION]  
+>
+> ## Disclaimer- Use at Your Own Risk
+>
+>*This tutorial requires some technical knowledge. If you're unfamiliar with how this works, you may want to reconsider before proceeding.*
+>
+
+
 ## My Test Environmennt
 - Zorin OS 17.2 (Based on Ubuntu 22.04)
 - Nvidia RTX 3050 Mobile
@@ -19,6 +27,12 @@ sudo apt install x11vnc
 ```
 - ### In the Tablet
   - A VNC viewer: I use [AVNC](https://play.google.com/store/apps/details?id=com.gaurav.avnc) for android but you can use any other app as well. I don't test it for IOS but I am sure there are VNC clients for IOS. They should work.
+ 
+> [!WARNING]
+>
+> Do not forget to backup your data before proceeding in case of anything.
+>
+
 ## Creating a Virtual Display
 I tried [this tutorial](https://github.com/santiagofdezg/linux-extend-screen) but it didn't work for me but I hope it works for you. I think it didn't work because I have a Nvidia GPU.
 Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors). I just mixed these two tutorials and it works for me.    
