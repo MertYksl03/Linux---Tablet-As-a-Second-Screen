@@ -187,7 +187,7 @@ If your are done using the second screen you can disable it with this command
 ```bash
 xrandr --output HDMI-1-0 --off
 ```
-## To Achive More VNC server
+## To Achive More Secure VNC server
 ### Limit the Machines That Can Connect
 When creating a VNC server with x11vnc with `-allow` flag you can limit the devices that can connect the server.    
 `x11vnc -allow 192.168.0.1,192.168.0.2,192.168.0.3`   
