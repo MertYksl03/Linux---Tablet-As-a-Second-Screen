@@ -182,12 +182,19 @@ After your job done with your second tablet display don't forget to turn of the 
 ```bash
 adb kill-server
 ```
-# Disabling the Second Display
+## Disabling the Second Display
 If your are done using the second screen you can disable it with this command
 ```bash
 xrandr --output HDMI-1-0 --off
 ```
-
+## To Achive More VNC server
+### Limit the Machines That Can Connect
+When creating a VNC server with x11vnc with `-allow` flag you can limit the devices that can connect the server.    
+`x11vnc -allow 192.168.0.1,192.168.0.2,192.168.0.3`   
+You can add as many as you want(I don't know if there is a limit) by separating them with a comma (',').   
+If you are connecting via USB, you can just `x11vnc -allow 127.0.0.1`
+### More Security Options
+For further more information you can check [this](https://github.com/santiagofdezg/linux-extend-screen?tab=readme-ov-file#add-more-security-to-the-connection).
 > [!NOTE]
 > Changing the Xorg Nvidia config file results there is always a virtual dislay is connected to the port you added the `/usr/share/X11/xorg.conf.d/10-nvidia.conf`. It can be so annoying to have a virtual display that you cant see. To prevent that add the disabling command in my Gnome Startup Applications. I active it when i need it.
  
