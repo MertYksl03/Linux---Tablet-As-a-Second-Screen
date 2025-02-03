@@ -1,7 +1,7 @@
 # How to use your tablet as a display for your Linux Desktop?
 I just wanted to use my android tablet as a second monitor on linux and it took so many hours to achive that. I read, watched bunch of differant tutorials. It's so complex than I expected.
 After figuring it out, I decied to write a tutorial.   
-If you are reading this you are probably the same as I was. And i hope this tutorial help you to do it. Then let's get started.    
+If you are reading this you are probably the same as I was. And i hope this tutorial help you to do it.     
 This tutorial is for especially for **Nvidia users**. But if you have **AMD** or **Intel** graphic card, **I guide you to the right resourses**.    
 > [!CAUTION]  
 >
