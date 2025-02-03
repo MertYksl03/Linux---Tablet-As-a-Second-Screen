@@ -40,7 +40,8 @@ Then I came across [this](https://github.com/augustoicaro/Immersed-Linux-Virtual
  ### For AMD and Intel GPUs
 Because I have Nvidia GPU, I am going to explain it for Nvidia cards. But,     
 *If you have an AMD card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#evdi-module)*    
-*If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*     
+*If you have an Intel card, check [this](https://github.com/augustoicaro/Immersed-Linux-Virtual-Monitors?tab=readme-ov-file#intel-driver)*    
+Then proceed to the [VNC Server Part]()
 
 ### For Nvida GPUs
 #### First we need to know if the Xorg config file exist at `/etc/X11/xorg.conf`
@@ -150,11 +151,16 @@ Now we can enable the virtual monitor we created by
 xrandr --output HDMI-1-0 --right-of eDP --mode 1280x800_60.00
 ```
 I want the second display is placed at the right side of my main monitor, so I use `--right-of` but you can use `--left-of`. `below` or `above`. You can see your mouse cursor now can go beyond the displays edges.    
-
-It's time to start the VNC server
+## Creating a VNC server 
+To start the VNC server with the virtual display that you just created, you can use these two commands:
+```bash
+x11vnc -display :1
+```   
+or
 ```bash
 x11vnc -clip 1280x800+0+0
 ```
+(Use the resolution of the virtual display. You can check that by `xrandr`)     
 Now you can connect the server.    
 > [!CAUTION]  
 >
